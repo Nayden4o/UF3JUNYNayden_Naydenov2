@@ -45,6 +45,7 @@ public class Clase {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+        
     }
 
     public void setCapacidadAlumnos(int capacidadAlumnos) {
