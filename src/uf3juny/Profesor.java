@@ -1,3 +1,5 @@
+package uf3juny;
+
 public class Profesor extends Persona {
 
     private String departament;

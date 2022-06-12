@@ -1,3 +1,5 @@
+package uf3juny;
+
 public class Alumno extends Persona {
 
     private String fechaNacimiento;

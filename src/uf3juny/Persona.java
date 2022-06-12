@@ -1,3 +1,5 @@
+package uf3juny;
+
 public abstract class Persona {
 
     private String nombre;
