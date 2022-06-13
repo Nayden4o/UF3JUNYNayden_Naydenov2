@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="recus">
+  <ClassDiagramComponents>
+    <Class name="Instituto" package="" visibility="public" xPosition="807.0" yPosition="89.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="clases" type="ArrayList" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Clase" package="" visibility="public" xPosition="783.0" yPosition="261.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="capacidadAlumnos" type="int" visibility="private"/>
+        <Field name="numOrdenadores" type="int" visibility="private"/>
+        <Field name="alumnos" type="ArrayList" visibility="private"/>
+        <Field name="profesor" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ordenadoresAlumnos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" isAbstract="true" xPosition="807.0" yPosition="597.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Profesor" package="" visibility="public" xPosition="452.0" yPosition="553.0">
+      <Fields>
+        <Field name="departament" type="String" visibility="private"/>
+        <Field name="cargo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Alumno" package="" visibility="public" xPosition="1133.0" yPosition="537.0">
+      <Fields>
+        <Field name="fechaNacimiento" type="String" visibility="private"/>
+        <Field name="codigoCiclo" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Alumno" target="Persona"/>
+    <IsRelation name="is" source="Profesor" target="Persona"/>
+    <HasRelation name="compuesto" source="Instituto" target="Clase" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Clase" target="Profesor" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="tiene" source="Clase" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
